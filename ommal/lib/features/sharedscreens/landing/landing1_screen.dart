@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ommal/components/lang_changer.dart';
 import 'package:ommal/components/primary_button.dart';
 import 'package:ommal/features/sharedscreens/landing/landing2_screen.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/choose_lang.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/stepprogress.dart';
+import 'package:ommal/l10n/app_localizations.dart';
 import 'package:step_progress/step_progress.dart';
 
 class Landing1Screen extends StatefulWidget {
@@ -14,7 +16,6 @@ class Landing1Screen extends StatefulWidget {
 
 class _Landing1ScreenState extends State<Landing1Screen> {
   late final StepProgressController stepProgressController;
-  AppLanguage _language = AppLanguage.arabic;
 
   @override
   void initState() {
@@ -33,6 +34,8 @@ class _Landing1ScreenState extends State<Landing1Screen> {
 
   @override
   Widget build(BuildContext context) {
+    final localeProvider = LocaleScope.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: //progressbar
@@ -60,14 +63,15 @@ class _Landing1ScreenState extends State<Landing1Screen> {
                 ),
               ),
               //title
-              const Text(
-                "عملٌ متقن ، خدمةٌ موثوقة بكل سهولة.",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              Text(
+                AppLocalizations.of(context)!.landin1title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
               //subtitle
-              const Text(
-                "اعثر على عمالةٍ ماهرةٍ وموثوقةٍ لمنزلك أو مكتبك أو مشروعك التجاري، أو احصل على المزيد من فرص العمل كمتخصصٍ مستقل.",
-              ),
+              Text(AppLocalizations.of(context)!.landin1subtitle),
 
               //button & language
               Row(
@@ -75,7 +79,7 @@ class _Landing1ScreenState extends State<Landing1Screen> {
                   SizedBox(
                     width: 155,
                     child: PrimaryButton(
-                      btntext: "استمر >",
+                      btntext: AppLocalizations.of(context)!.landingbtn1,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -88,8 +92,14 @@ class _Landing1ScreenState extends State<Landing1Screen> {
                   ),
                   const Expanded(child: SizedBox()),
                   LanguageToggle(
-                    value: _language,
-                    onChanged: (lang) => setState(() => _language = lang),
+                    value: localeProvider.isArabic
+                        ? AppLanguage.arabic
+                        : AppLanguage.english,
+                    onChanged: (lang) => localeProvider.setLocale(
+                      lang == AppLanguage.arabic
+                          ? const Locale('ar')
+                          : const Locale('en'),
+                    ),
                   ),
                 ],
               ),

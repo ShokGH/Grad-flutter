@@ -98,7 +98,7 @@ abstract class AppLocalizations {
   /// No description provided for @login.
   ///
   /// In en, this message translates to:
-  /// **'Log In'**
+  /// **'Log in'**
   String get login;
 
   /// No description provided for @signup.
@@ -328,6 +328,198 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Appointments & Tasks Schedule'**
   String get calendar;
+
+  /// No description provided for @landin1title.
+  ///
+  /// In en, this message translates to:
+  /// **'Excellent work, reliable service with ease.'**
+  String get landin1title;
+
+  /// No description provided for @landin1subtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Find skilled and reliable labor for your home, office, or business project, or get more job opportunities as a freelancer.'**
+  String get landin1subtitle;
+
+  /// No description provided for @landin2title.
+  ///
+  /// In en, this message translates to:
+  /// **'How would you like to use San3a?'**
+  String get landin2title;
+
+  /// No description provided for @landin2cardtitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Find a tradesperson.'**
+  String get landin2cardtitle1;
+
+  /// No description provided for @landin2cardtitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'Explore new job opportunities.'**
+  String get landin2cardtitle2;
+
+  /// No description provided for @landin2cardsubtitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Plumbing, electrical work, AC maintenance, carpentry, painting, appliance repair, furniture moving, and more.'**
+  String get landin2cardsubtitle1;
+
+  /// No description provided for @landin2cardsubtitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'Create your profile, receive job requests nearby, build your reputation, and get paid securely.'**
+  String get landin2cardsubtitle2;
+
+  /// No description provided for @wlandingtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Get more jobs.'**
+  String get wlandingtitle;
+
+  /// No description provided for @wlandingsubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The San3a app connects you with clients who need your skills. Find nearby jobs and send offers. Pricing, managing your schedule, and getting paid securely—all in one simple app.'**
+  String get wlandingsubtitle;
+
+  /// No description provided for @clandingtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Get the right professional at the right price.'**
+  String get clandingtitle;
+
+  /// No description provided for @clandingsubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Artificial intelligence is used to help you find the right worker, understand fair pricing, and make confident decisions.'**
+  String get clandingsubtitle;
+
+  /// No description provided for @landingbtn1.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue >'**
+  String get landingbtn1;
+
+  /// No description provided for @landingbtn2.
+  ///
+  /// In en, this message translates to:
+  /// **'Get started now'**
+  String get landingbtn2;
+
+  /// No description provided for @createaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Create an account on San3a'**
+  String get createaccount;
+
+  /// No description provided for @fullname.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get fullname;
+
+  /// No description provided for @fullnameex.
+  ///
+  /// In en, this message translates to:
+  /// **'Example: Ahmed Mohamed Ali'**
+  String get fullnameex;
+
+  /// No description provided for @phonenumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile number'**
+  String get phonenumber;
+
+  /// No description provided for @phonenumberex.
+  ///
+  /// In en, this message translates to:
+  /// **'Example: 01xxxxxxxxx'**
+  String get phonenumberex;
+
+  /// No description provided for @gmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Email address (optional)'**
+  String get gmail;
+
+  /// No description provided for @gmailex.
+  ///
+  /// In en, this message translates to:
+  /// **'Example: ahmed@mail.com'**
+  String get gmailex;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @confirmpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get confirmpassword;
+
+  /// No description provided for @createaccountbtn.
+  ///
+  /// In en, this message translates to:
+  /// **'Create account'**
+  String get createaccountbtn;
+
+  /// No description provided for @alrhvaccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alrhvaccount;
+
+  /// No description provided for @loginTS.
+  ///
+  /// In en, this message translates to:
+  /// **'Log in to use San3a'**
+  String get loginTS;
+
+  /// No description provided for @phoneoremail.
+  ///
+  /// In en, this message translates to:
+  /// **'Mobile or email address'**
+  String get phoneoremail;
+
+  /// No description provided for @phoneoremailex.
+  ///
+  /// In en, this message translates to:
+  /// **'01xxxxxxxxx or your email address'**
+  String get phoneoremailex;
+
+  /// No description provided for @rememberme.
+  ///
+  /// In en, this message translates to:
+  /// **'Remember me'**
+  String get rememberme;
+
+  /// No description provided for @forgetpassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot your password?'**
+  String get forgetpassword;
+
+  /// No description provided for @firsttime.
+  ///
+  /// In en, this message translates to:
+  /// **'First time The app?'**
+  String get firsttime;
+
+  /// No description provided for @createaccoun.
+  ///
+  /// In en, this message translates to:
+  /// **'Register now'**
+  String get createaccoun;
+
+  /// No description provided for @passwordex.
+  ///
+  /// In en, this message translates to:
+  /// **'letters, numbers and symbols'**
+  String get passwordex;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

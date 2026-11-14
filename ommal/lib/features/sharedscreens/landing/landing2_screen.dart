@@ -3,6 +3,7 @@ import 'package:ommal/features/customer/clanding/customer_landing_screen.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/choose_account_type.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/stepprogress.dart';
 import 'package:ommal/features/worker/wlanding/worker_landing_screen.dart';
+import 'package:ommal/l10n/app_localizations.dart';
 import 'package:step_progress/step_progress.dart';
 
 class Landing2Screen extends StatefulWidget {
@@ -56,9 +57,12 @@ class _Landing2ScreenState extends State<Landing2Screen> {
                   ),
                 ),
               ),
-              const Text(
-                "حابب تستخدم صنّعة إزاي؟",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              Text(
+                AppLocalizations.of(context)!.landin2title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
               GestureDetector(
                 onTap: () {
@@ -69,11 +73,10 @@ class _Landing2ScreenState extends State<Landing2Screen> {
                     ),
                   );
                 },
-                child: const ChooseAccountType(
-                  title: 'ابحث عن صنايعي',
-                  subtitle:
-                      'سباكة، كهرباء، صيانة مكيفات، نجارة، دهان، صيانة أجهزة منزلية، نقل أثاث، وغيرها.',
-                  icon: Icon(Icons.work),
+                child: ChooseAccountType(
+                  title: AppLocalizations.of(context)!.landin2cardtitle1,
+                  subtitle: AppLocalizations.of(context)!.landin2cardsubtitle1,
+                  icon: const Icon(Icons.work),
                 ),
               ),
               GestureDetector(
@@ -85,11 +88,10 @@ class _Landing2ScreenState extends State<Landing2Screen> {
                     ),
                   );
                 },
-                child: const ChooseAccountType(
-                  title: 'استكشف فرص شغل جديدة',
-                  subtitle:
-                      'أنشئ ملفك الشخصي، واستقبل طلبات العمل القريبة، وعزز سمعتك، واحصل على مدفوعاتك بأمان.',
-                  icon: Icon(Icons.work),
+                child: ChooseAccountType(
+                  title: AppLocalizations.of(context)!.landin2cardtitle2,
+                  subtitle: AppLocalizations.of(context)!.landin2cardsubtitle2,
+                  icon: const Icon(Icons.work),
                 ),
               ),
             ],

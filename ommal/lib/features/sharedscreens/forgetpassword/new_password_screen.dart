@@ -13,6 +13,7 @@ class NewPasswordScreen extends StatefulWidget {
 class _NewPasswordScreenState extends State<NewPasswordScreen> {
   final _formKey = GlobalKey<FormState>();
   final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
 
   bool _obscurePassword = true;
 
@@ -23,12 +24,25 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
     return null;
   }
 
+  String? _validateConfirmPassword(String? value) {
+    final input = value ?? '';
+    if (input.isEmpty) return 'من فضلك أكد كلمة المرور';
+    if (input != _passwordController.text) return 'كلمتا المرور غير متطابقتين';
+    return null;
+  }
+
   void _submit() {
     FocusScope.of(context).unfocus();
     if (_formKey.currentState?.validate() ?? false) {
       //add auth service here
       // ignore: unused_local_variable
       final password = _passwordController.text;
+
+      //navigator
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute<void>(builder: (context) => const AuthSucessScreen()),
+      );
     }
   }
 
@@ -85,6 +99,11 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                     validator: _validatePassword,
                     obscureText: _obscurePassword,
                     onFieldSubmitted: (_) => _submit(),
+                    onChanged: (_) {
+                      if (_confirmPasswordController.text.isNotEmpty) {
+                        _formKey.currentState?.validate();
+                      }
+                    },
                     decoration: InputDecoration(
                       suffixIcon: IconButton(
                         icon: Icon(
@@ -107,10 +126,10 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
-                    controller: _passwordController,
+                    controller: _confirmPasswordController,
                     textInputAction: TextInputAction.done,
                     autofillHints: const [AutofillHints.password],
-                    validator: _validatePassword,
+                    validator: _validateConfirmPassword,
                     obscureText: _obscurePassword,
                     onFieldSubmitted: (_) => _submit(),
                     decoration: InputDecoration(
@@ -160,17 +179,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
       ),
       bottomNavigationBar: SafeArea(
         minimum: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-        child: PrimaryButton(
-          btntext: 'حفظ كلمة المرور',
-          onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute<void>(
-                builder: (context) => const AuthSucessScreen(),
-              ),
-            );
-          },
-        ),
+        child: PrimaryButton(btntext: 'حفظ كلمة المرور', onPressed: _submit),
       ),
     );
   }

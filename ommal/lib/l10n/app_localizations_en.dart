@@ -9,7 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get login => 'Log In';
+  String get login => 'Log in';
 
   @override
   String get signup => 'Create New Account';
@@ -124,4 +124,100 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get calendar => 'Appointments & Tasks Schedule';
+
+  @override
+  String get landin1title => 'Excellent work, reliable service with ease.';
+
+  @override
+  String get landin1subtitle => 'Find skilled and reliable labor for your home, office, or business project, or get more job opportunities as a freelancer.';
+
+  @override
+  String get landin2title => 'How would you like to use San3a?';
+
+  @override
+  String get landin2cardtitle1 => 'Find a tradesperson.';
+
+  @override
+  String get landin2cardtitle2 => 'Explore new job opportunities.';
+
+  @override
+  String get landin2cardsubtitle1 => 'Plumbing, electrical work, AC maintenance, carpentry, painting, appliance repair, furniture moving, and more.';
+
+  @override
+  String get landin2cardsubtitle2 => 'Create your profile, receive job requests nearby, build your reputation, and get paid securely.';
+
+  @override
+  String get wlandingtitle => 'Get more jobs.';
+
+  @override
+  String get wlandingsubtitle => 'The San3a app connects you with clients who need your skills. Find nearby jobs and send offers. Pricing, managing your schedule, and getting paid securely—all in one simple app.';
+
+  @override
+  String get clandingtitle => 'Get the right professional at the right price.';
+
+  @override
+  String get clandingsubtitle => 'Artificial intelligence is used to help you find the right worker, understand fair pricing, and make confident decisions.';
+
+  @override
+  String get landingbtn1 => 'Continue >';
+
+  @override
+  String get landingbtn2 => 'Get started now';
+
+  @override
+  String get createaccount => 'Create an account on San3a';
+
+  @override
+  String get fullname => 'Full name';
+
+  @override
+  String get fullnameex => 'Example: Ahmed Mohamed Ali';
+
+  @override
+  String get phonenumber => 'Mobile number';
+
+  @override
+  String get phonenumberex => 'Example: 01xxxxxxxxx';
+
+  @override
+  String get gmail => 'Email address (optional)';
+
+  @override
+  String get gmailex => 'Example: ahmed@mail.com';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get confirmpassword => 'Confirm password';
+
+  @override
+  String get createaccountbtn => 'Create account';
+
+  @override
+  String get alrhvaccount => 'Already have an account?';
+
+  @override
+  String get loginTS => 'Log in to use San3a';
+
+  @override
+  String get phoneoremail => 'Mobile or email address';
+
+  @override
+  String get phoneoremailex => '01xxxxxxxxx or your email address';
+
+  @override
+  String get rememberme => 'Remember me';
+
+  @override
+  String get forgetpassword => 'Forgot your password?';
+
+  @override
+  String get firsttime => 'First time The app?';
+
+  @override
+  String get createaccoun => 'Register now';
+
+  @override
+  String get passwordex => 'letters, numbers and symbols';
 }

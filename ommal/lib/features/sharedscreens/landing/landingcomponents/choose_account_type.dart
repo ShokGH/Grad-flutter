@@ -21,6 +21,7 @@ class ChooseAccountType extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
+            // ignore: deprecated_member_use
             color: Colors.black.withOpacity(0.2),
             blurRadius: 3.9,
             spreadRadius: -1.0,

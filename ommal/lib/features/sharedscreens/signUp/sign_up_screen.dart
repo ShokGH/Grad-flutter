@@ -54,6 +54,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
       // ignore: unused_local_variable
       final password = _passwordController.text;
       debugPrint('login: $identifier / remember=$_rememberMe');
+
+      //navigator
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute<void>(builder: (context) => const LogInScreen()),
+      );
     }
   }
 
@@ -83,50 +89,59 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //title
-                  const Text(
-                    "أنشأ حساب في صنعه",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  Text(
+                    AppLocalizations.of(context)!.createaccount,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                   const SizedBox(height: 16),
                   //name
-                  const Text(
-                    "الاسم بالكامل",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.fullname,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
                     controller: _identifierController,
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
                     validator: _validateIdentifier,
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.person),
-                      hintText: 'مثال: أحمد محمد علي',
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.person),
+                      hintText: AppLocalizations.of(context)!.fullnameex,
                     ),
                   ),
                   const SizedBox(height: 16),
                   //phone number
-                  const Text(
-                    "رقم الموبايل",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.phonenumber,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
                     controller: _identifierController,
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.phone,
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
                     validator: _validateIdentifier,
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
-                      hintText: "مثال: 01012345678",
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.phone),
+                      hintText: AppLocalizations.of(context)!.phonenumberex,
                     ),
                   ),
                   const SizedBox(height: 16),
                   //email
-                  const Text(
-                    "البريد الإلكتروني (اختياري)",
+                  Text(
+                    AppLocalizations.of(context)!.gmail,
                     style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
                   ),
                   const SizedBox(height: 8),
@@ -136,16 +151,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
                     validator: _validateIdentifier,
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.mail),
-                      hintText: "مثال: ahmed@mail.com",
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.mail),
+                      hintText: AppLocalizations.of(context)!.gmailex,
                     ),
                   ),
                   const SizedBox(height: 16),
                   //password
-                  const Text(
-                    "كلمة المرور",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.password,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -167,13 +185,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                       prefixIcon: const Icon(Icons.lock),
-                      hintText: 'أرقم و حروف و رموز',
+                      hintText: AppLocalizations.of(context)!.passwordex,
                     ),
                   ),
                   //confirm password
-                  const Text(
-                    "تأكيد كلمة المرور",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.confirmpassword,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -195,17 +216,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ),
                       ),
                       prefixIcon: const Icon(Icons.lock),
-                      hintText: 'أرقم و حروف و رموز',
+                      hintText: AppLocalizations.of(context)!.passwordex,
                     ),
                   ),
                   //remember me/ forget password
                   const SizedBox(height: 16),
-                  PrimaryButton(btntext: 'إنشاء الحساب', onPressed: () {}),
+                  PrimaryButton(
+                    btntext: AppLocalizations.of(context)!.createaccountbtn,
+                    onPressed: _submit,
+                  ),
                   const SizedBox(height: 16),
                   Row(
+                    spacing: 4,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("عندك حساب بالفعل؟"),
+                      Text(AppLocalizations.of(context)!.alrhvaccount),
                       TextButton(
                         onPressed: () {
                           Navigator.pushReplacement(
@@ -221,7 +246,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
                         child: Text(
-                          "سجل دخولك",
+                          AppLocalizations.of(context)!.login,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: primary,

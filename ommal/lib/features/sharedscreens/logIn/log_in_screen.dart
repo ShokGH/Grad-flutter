@@ -83,16 +83,22 @@ class _LogInScreenState extends State<LogInScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //title
-                  const Text(
-                    "سجل دخولك لاستخدام صنعة",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  Text(
+                    AppLocalizations.of(context)!.loginTS,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                   const SizedBox(height: 16),
 
                   //Email/phone number
-                  const Text(
-                    "الموبايل أو البريد الإلكتروني",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.phoneoremail,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -101,17 +107,20 @@ class _LogInScreenState extends State<LogInScreen> {
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
                     validator: _validateIdentifier,
-                    decoration: const InputDecoration(
-                      prefixIcon: Icon(Icons.phone),
-                      hintText: '01xxxxxxxxx أو بريدك',
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.phone),
+                      hintText: AppLocalizations.of(context)!.phoneoremailex,
                     ),
                   ),
                   const SizedBox(height: 16),
 
                   //password
-                  const Text(
-                    "كلمة المرور",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                  Text(
+                    AppLocalizations.of(context)!.password,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
@@ -133,7 +142,7 @@ class _LogInScreenState extends State<LogInScreen> {
                         ),
                       ),
                       prefixIcon: const Icon(Icons.lock),
-                      hintText: 'أرقم و حروف و رموز',
+                      hintText: AppLocalizations.of(context)!.passwordex,
                     ),
                   ),
 
@@ -147,7 +156,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             onChanged: (value) =>
                                 setState(() => _rememberMe = value ?? false),
                           ),
-                          const Text("تذكرني"),
+                          Text(AppLocalizations.of(context)!.rememberme),
                         ],
                       ),
                       const Spacer(),
@@ -167,7 +176,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
                         child: Text(
-                          "نسيت كلمة المرور؟",
+                          AppLocalizations.of(context)!.forgetpassword,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -179,14 +188,18 @@ class _LogInScreenState extends State<LogInScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  PrimaryButton(btntext: 'دخول', onPressed: () {}),
+                  PrimaryButton(
+                    btntext: AppLocalizations.of(context)!.login,
+                    onPressed: () {},
+                  ),
                   const SizedBox(height: 16),
 
                   //don't have account
                   Row(
+                    spacing: 4,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("أول مرة تستخدم التطبيق؟"),
+                      Text(AppLocalizations.of(context)!.firsttime),
                       TextButton(
                         onPressed: () {
                           Navigator.push(
@@ -202,7 +215,7 @@ class _LogInScreenState extends State<LogInScreen> {
                           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                         ),
                         child: Text(
-                          "سجل الآن",
+                          AppLocalizations.of(context)!.signup,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: primary,

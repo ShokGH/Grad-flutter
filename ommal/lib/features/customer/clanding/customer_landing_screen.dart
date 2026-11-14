@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ommal/components/primary_button.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/stepprogress.dart';
 import 'package:ommal/features/sharedscreens/logIn/log_in_screen.dart';
+import 'package:ommal/l10n/app_localizations.dart';
 import 'package:step_progress/step_progress.dart';
 
 class CustomerLandingScreen extends StatefulWidget {
@@ -56,16 +57,17 @@ class _CustomerLandingScreenState extends State<CustomerLandingScreen> {
                 ),
               ),
               //title
-              const Text(
-                "احصل على المحترف المناسب بالسعر المناسب.",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              Text(
+                AppLocalizations.of(context)!.clandingtitle,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
               ),
               //subtitle
-              const Text(
-                "تستخدم صنعة الذكاء الاصطناعي لمساعدتك في العثور على العامل المناسب، وفهم الأسعار العادلة، واتخاذ قرارات واثقة.",
-              ),
+              Text(AppLocalizations.of(context)!.clandingsubtitle),
               PrimaryButton(
-                btntext: "ابدأ الآن",
+                btntext: AppLocalizations.of(context)!.landingbtn2,
                 onPressed: () {
                   Navigator.push(
                     context,
