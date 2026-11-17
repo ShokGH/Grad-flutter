@@ -12,7 +12,7 @@
   "changeloc": "تغيير الموقع",
   "bookservice": "حجز خدمة",
   "search": "نتائج البحث",
-  "filter": "تصفية البحث",
+  "searchfilter": "تصفية البحث",
   "emergbook": "طلب خدمة طوارئ",
   "bookconfirmed": "تم تأكيد الحجز",
   "liveloc": "تتبع الفني",
@@ -39,6 +39,13 @@
   "share": "شارك التطبيق",
   "bonus": "المكآفات",
   "calendar": "جدول المواعيد والمهام",
+  "workerprf": "ملف مقدم الخدمة",
+  "searchresultdetails": "عرض التفاصيل",
+  "workerprf": "Service Provider Profile",
+  "searchresultdetails": "View Details",
+
+
+
   "landin1title": "عملٌ متقن ، خدمةٌ موثوقة بكل سهولة.",
   "landin1subtitle": "اعثر على عمالةٍ ماهرةٍ وموثوقةٍ لمنزلك أو مكتبك أو مشروعك التجاري، أو احصل على المزيد من فرص العمل كمتخصصٍ مستقل.",
   "landin2title": "حابب تستخدم صنّعة إزاي؟",
@@ -52,6 +59,9 @@
   "clandingsubtitle": "تستخدم صنعة الذكاء الاصطناعي لمساعدتك في العثور على العامل المناسب، وفهم الأسعار العادلة، واتخاذ قرارات واثقة.",
   "landingbtn1": "استمر >",
   "landingbtn2": "ابدأ الآن",
+
+
+
   "createaccount": "أنشأ حساب في صنعه",
   "fullname": "الاسم بالكامل",
   "fullnameex":"مثال: أحمد محمد علي",
@@ -62,6 +72,9 @@
   "password": "كلمة المرور",
   "confirmpassword": "تأكيد كلمة المرور",
   "createaccountbtn": "إنشاء الحساب",
+
+
+
   "login": "سجل دخولك",
   "alrhvaccount": "عندك حساب بالفعل؟",
   "loginTS": "سجل دخولك لاستخدام صنعة",
@@ -71,7 +84,140 @@
   "forgetpassword": "نسيت كلمة المرور؟",
   "firsttime": "أول مرة تستخدم التطبيق؟",
   "createaccoun": "سجل الآن",
-  "passwordex": "أرقم و حروف و رموز"
+  "passwordex": "أرقم و حروف و رموز",
 
 
+
+  "homewelcomeC": "أهلاً بيك يا عمر",
+  "homelocation": "الإسكندرية",
+  "homemoney": "ج.م 00.00",
+  "homesearchhintC": "بتدور على اى؟ (سباك , كهربائى)",
+
+  "homewelcomeW": "أهلاً بيك يا علي",
+  "homesearchhintW": "دور على شغل مناسب ليك...",
+
+  "homeemserhead": "خدمة طوارئ ",
+  "homeemsertitle": "صنايعية جاهزين فأي وقت",
+  "homeemsersubtitle": "للحالات الطارئة",
+  "homeemserbtn": "حجز طارئ الآن",
+
+  "homeaihead": "✨ جرّب قبل ما توظف ",
+  "homeaititle": "جرّب حل المشكلة بنفسك",
+  "homeaisubtitle": "جرب حل المشكلة بنفسك قبل ما تطلب فني",
+  "homeaibtn": "جرب بنفسك",
+
+  "homeposts": "منشورات العمال",
+  "homepostsub": "شوف الصنايعية اللي عارضين شغلهم وخدماتهم.",
+  "homeposttitle": "صيانة وتجديد سباكة شقة بالكامل",
+  "homepostbtn": "تفاصيل المنشور",
+  "homepostprf": "أحمد رمضان",
+  "homepostprfloc": "• القاهرة",
+  "homepostsviewall": "عرض كل الأعمال",
+
+
+  "changelocaddloc": "الطلب إلى موقع آخر",
+  "changeloccity": "المنزل",
+  "changelocaddress": "5480 الاسكندرية",
+  "changelocbtn": "تأكيد الموقع",
+
+
+  "addmoneysub": "اكتب القيمة المراد اضافتها الي رصيد محفظتك",
+  "addmoneyamount": "قيمة الشحن",
+  "addmoneyamounttextfeild": "ادخل القيمة",
+  "addmoneytype": "قم باختيار طريقة الشحن",
+  "addmoneyaddcard": "+إضافة بطاقة",
+  "addmoneybtn": "شحن الرصيد",
+
+
+  "searchfilters1": "صيانه",
+  "searchfilters2": "الاسكندرية",
+  "searchnoresults": "لسه مفيش صيانه في الإسكندرية",
+  "searchnoresultssudgestion": "ممكن تلاقي في محافظات تانية",
+  "searchnoresultsbtn": "اعرض كل المحافظات",
+
+  "searchcardtitle": "كهربائي منازل - تأسيس وصيانة",
+  "searchcardprice": "260 ج.م",
+  "searchcardprf": "محمد احمد",
+  "searchcardprfdesc": "كهربائي منازل | العصافرة",
+
+
+
+  "searchfilterorder": "الترتيب",
+  "searchfilterorder1": "الأعلى تقييماً",
+  "searchfilterorder2": "الأقرب",
+  "searchfilterorder3": "السعر الأقل",
+  "searchfiltergovernate": "المحافظة",
+  "searchfiltercity": "المدينة",
+  "searchfilterapplybtn": "تطبيق",
+  "searchfilterresetbtn": "إعادة تعيين",
+
+
+
+  "searchresultdetailsestimatedprice": "سعر المعاينة",
+  "searchresultdetailsworkerstatus": "متاح للعمل",
+  "searchresultdetailsdesc": "الوصف",
+  "searchresultdetailsdescrip": "نقاش محترف تأسيس وتشطيب ودهان الحوائط وعمل جميع انواع الديكورات الحديثة مثل تركيب بنواهات وشيب بورد وبديل خشب وبديل رخام وبديل حجر وعمل جميع الدهانات والديكورات مثل استوك انتيك والقطيفه وجميع ديكورات بسعر مناسب وجوده عاليه وموعيد محدده",
+  "searchresultdetailsworkerspec": "بيعمل إيه بالظبط",
+  "searchresultdetailsworkerspec1": "دهانات حوائط وأسقف",
+  "searchresultdetailsworkerspec2": "تركيب ورق حائط",
+  "searchresultdetailsworkerspec3": "دهانات قطيفة وشامواه",
+  "searchresultdetailsworkerspec4": "دهانات أبواب خشبية",
+  "searchresultdetailsworkerspec5": "معالجة رطوبة وتقشير",
+  "searchresultdetailsworkerspec6": "عزل حوائط",
+  "searchresultdetailsworkerspec7": "رسم وديكورات مودرن",
+  "searchresultdetailsbtn": "احجز الخدمة الآن",
+
+
+
+  "workerprfname": "أحمد محمد",
+  "workerprfloc": "محرم بك، الإسكندرية",
+
+  "workerprfbookbtn": "احجز الآن",
+  "workerprfchatbtn": "محادثة الفني",
+
+  "workerprfrate": "4.9",
+  "workerprfcompser": "142",
+  "workerprfexp": "+5",
+  "workerprfratetitle": "سنوات خبرة",
+  "workerprfcompsertitle": "خدمات منجزة",
+  "workerprfexptitle": "التقييم",
+
+  "workerprfabout": "نبذة عني",
+  "workerprfabout1": "دهانات حوائط وأسقف",
+  "workerprfabout2": "معالجة رطوبة وتقشير",
+  "workerprfabout3": "رسم وديكورات مودرن",
+
+  "workerprfprevwork": "شغل سابق",
+
+  "workerrating": "آراء العملاء",
+  "workerratingnone": "لسه مفيش تقييمات",
+  "workerratingnonesub": "اكتب أول تقييم بعد ما تخلص الخدمة.",
+
+
+
+  "bookserviceaddphoto": "إرفاق صورة للمشكلة (اختياري)",
+  "bookserviceaddphotosub": "اضغط هنا لرفع أو التقاط صورة واضحة",
+  "bookserviceaidesc": "تشخيص المشكلة بالذكاء الاصطناعي",
+  "bookserviceaidescsub": "ساعدنا نفهم المشكلة ونقترح السبب المحتمل",
+  "bookserviceaidescbtn": "تشخيص المشكلة",
+  "bookservicelocdesc": "موقع المشكلة بالتفصيل *",
+  "bookservicelocdescex": "الاسكندرية، شارع المشير",
+  "bookserviceprobdesc": "اكتب وصفًا للمشكلة *",
+  "bookserviceprobdescex": "تسريب شديد في ماسورة الصرف الرئيسية أسفل حوض المطبخ، المياه تغرق الأرضية حالياً ومحبس المياه لا يعمل بالكامل.",
+  "bookserviceaiprobdesc": "اكتب مشكلتك بدقة",
+  "bookserviceaiprobdescsub": "استخدم الذكاء الاصطناعي للإنشاء وصف واضح لمشكلتك",
+  "bookserviceaiprobdescsubbtn": "إنشاء وصف تلقائي",
+  "bookserviceimportance": "درجة الأهمية والسرعة *",
+  "bookservicebookbtn": "اختار موعد",
+  "bookserviceembtn": "احجز طوارئ الآن",
+
+
+
+  "eraseall": "مسح الكل",
+  "services": "الخدمات",
+  "plumber": "سباكة",
+  "painter": "دهانات",
+  "carpenter": "نجارة",
+  "ac": "تكييفات",
+  "elecrician": "كهرباء"
 }

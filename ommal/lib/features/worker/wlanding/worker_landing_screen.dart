@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ommal/components/primary_button.dart';
 import 'package:ommal/features/sharedscreens/landing/landingcomponents/stepprogress.dart';
-import 'package:ommal/features/sharedscreens/logIn/log_in_screen.dart';
+import 'package:ommal/features/sharedscreens/signUp/sign_up_screen.dart';
 import 'package:ommal/l10n/app_localizations.dart';
 import 'package:step_progress/step_progress.dart';
 
@@ -72,7 +72,8 @@ class _WorkerLandingScreenState extends State<WorkerLandingScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute<void>(
-                      builder: (context) => const LogInScreen(),
+                      builder: (context) =>
+                          const SignUpScreen(selectedUser: 'فني'),
                     ),
                   );
                 },

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:ommal/components/primary_button.dart';
+import 'package:ommal/features/customer/customerhome/c_home_screen.dart';
 import 'package:ommal/features/sharedscreens/logIn/log_in_screen.dart';
+import 'package:ommal/features/worker/workerhome/w_home_screen.dart';
 import 'package:ommal/l10n/app_localizations.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+  final String? _selectedUser;
+
+  const SignUpScreen({super.key, required this._selectedUser});
 
   @override
   State<SignUpScreen> createState() => _SignUpScreenState();
@@ -12,7 +16,9 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
-  final _identifierController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
   // ignore: prefer_final_fields
@@ -21,20 +27,41 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   void dispose() {
-    _identifierController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
   }
 
-  String? _validateIdentifier(String? value) {
+  String? _validateUsername(String? value) {
     final input = value?.trim() ?? '';
     if (input.isEmpty) {
-      return 'من فضلك أدخل رقم الموبايل أو البريد الإلكتروني';
+      return 'من فضلك أدخل اسمك';
+    }
+    return null;
+  }
+
+  String? _validateEmail(String? value) {
+    final input = value?.trim() ?? '';
+    if (input.isEmpty) {
+      return 'من فضلك أدخل البريد الإلكتروني';
     }
     final isEmail = RegExp(r'^[\w\.\-]+@[\w\-]+\.[\w\.\-]+$').hasMatch(input);
+    if (!isEmail) {
+      return 'أدخل بريدًا إلكترونيًا صحيحًا';
+    }
+    return null;
+  }
+
+  String? _validatePhone(String? value) {
+    final input = value?.trim() ?? '';
+    if (input.isEmpty) {
+      return 'من فضلك أدخل رقم الموبايل';
+    }
     final isPhone = RegExp(r'^01[0-9]{9}$').hasMatch(input);
-    if (!isEmail && !isPhone) {
-      return 'أدخل بريدًا إلكترونيًا صحيحًا أو رقم موبايل يبدأ بـ 01';
+    if (!isPhone) {
+      return 'أدخل بريدًا رقم موبايل يبدأ بـ 01';
     }
     return null;
   }
@@ -50,16 +77,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
     FocusScope.of(context).unfocus();
     if (_formKey.currentState?.validate() ?? false) {
       //add auth service here
-      final identifier = _identifierController.text.trim();
+      final username = _usernameController.text.trim();
+      final email = _emailController.text.trim();
+      final phone = _phoneController.text.trim();
       // ignore: unused_local_variable
-      final password = _passwordController.text;
-      debugPrint('login: $identifier / remember=$_rememberMe');
-
-      //navigator
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute<void>(builder: (context) => const LogInScreen()),
+      final password = _passwordController.text.trim();
+      debugPrint(
+        'username: $username / email: $email / phone: $phone / remember=$_rememberMe',
       );
+      //navigator
+      if (widget._selectedUser == 'فني') {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute<void>(builder: (context) => const WHomeScreen()),
+        );
+      } else if (widget._selectedUser == 'عميل') {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute<void>(builder: (context) => const CHomeScreen()),
+        );
+      }
     }
   }
 
@@ -107,11 +144,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
-                    controller: _identifierController,
+                    controller: _usernameController,
                     keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
-                    validator: _validateIdentifier,
+                    validator: _validateUsername,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.person),
                       hintText: AppLocalizations.of(context)!.fullnameex,
@@ -128,11 +165,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
-                    controller: _identifierController,
+                    controller: _phoneController,
                     keyboardType: TextInputType.phone,
                     textInputAction: TextInputAction.next,
-                    autofillHints: const [AutofillHints.username],
-                    validator: _validateIdentifier,
+                    autofillHints: const [AutofillHints.telephoneNumber],
+                    validator: _validatePhone,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.phone),
                       hintText: AppLocalizations.of(context)!.phonenumberex,
@@ -142,15 +179,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   //email
                   Text(
                     AppLocalizations.of(context)!.gmail,
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   TextFormField(
-                    controller: _identifierController,
+                    controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
                     autofillHints: const [AutofillHints.username],
-                    validator: _validateIdentifier,
+                    validator: _validateEmail,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.mail),
                       hintText: AppLocalizations.of(context)!.gmailex,
@@ -219,11 +259,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       hintText: AppLocalizations.of(context)!.passwordex,
                     ),
                   ),
-                  //remember me/ forget password
+
                   const SizedBox(height: 16),
                   PrimaryButton(
                     btntext: AppLocalizations.of(context)!.createaccountbtn,
-                    onPressed: _submit,
+                    onPressed: () => _submit(),
                   ),
                   const SizedBox(height: 16),
                   Row(

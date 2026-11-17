@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ommal/components/primary_button.dart';
+import 'package:ommal/features/customer/customerhome/c_home_screen.dart';
+import 'package:ommal/features/worker/workerhome/w_home_screen.dart';
 import 'package:ommal/features/sharedscreens/forgetpassword/forget_password_screen.dart';
+import 'package:ommal/components/choose_account_type.dart';
 import 'package:ommal/features/sharedscreens/signUp/sign_up_screen.dart';
 import 'package:ommal/l10n/app_localizations.dart';
 
@@ -15,7 +18,7 @@ class _LogInScreenState extends State<LogInScreen> {
   final _formKey = GlobalKey<FormState>();
   final _identifierController = TextEditingController();
   final _passwordController = TextEditingController();
-
+  String? _selectedUser;
   bool _rememberMe = false;
   bool _obscurePassword = true;
 
@@ -53,6 +56,17 @@ class _LogInScreenState extends State<LogInScreen> {
       final identifier = _identifierController.text.trim();
       // ignore: unused_local_variable
       final password = _passwordController.text;
+      if (_selectedUser == 'عميل') {
+        Navigator.push(
+          context,
+          MaterialPageRoute<void>(builder: (context) => const CHomeScreen()),
+        );
+      } else {
+        Navigator.push(
+          context,
+          MaterialPageRoute<void>(builder: (context) => const WHomeScreen()),
+        );
+      }
       debugPrint('login: $identifier / remember=$_rememberMe');
     }
   }
@@ -89,6 +103,17 @@ class _LogInScreenState extends State<LogInScreen> {
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                     ),
+                  ),
+                  const SizedBox(height: 16),
+
+                  //account type
+                  ChooseAccount(
+                    selectedUser: _selectedUser,
+                    onSelect: (user) {
+                      setState(() {
+                        _selectedUser = _selectedUser == user ? null : user;
+                      });
+                    },
                   ),
                   const SizedBox(height: 16),
 
@@ -190,7 +215,12 @@ class _LogInScreenState extends State<LogInScreen> {
 
                   PrimaryButton(
                     btntext: AppLocalizations.of(context)!.login,
-                    onPressed: () {},
+                    onPressed: _selectedUser == null
+                        ? null
+                        : () {
+                            // _selectedUser is 'عميل' or 'فني' here
+                            _submit();
+                          },
                   ),
                   const SizedBox(height: 16),
 
@@ -205,7 +235,8 @@ class _LogInScreenState extends State<LogInScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute<void>(
-                              builder: (context) => const SignUpScreen(),
+                              builder: (context) =>
+                                  SignUpScreen(selectedUser: _selectedUser),
                             ),
                           );
                         },

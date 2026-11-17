@@ -45,7 +45,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get search => 'نتائج البحث';
 
   @override
-  String get filter => 'تصفية البحث';
+  String get searchfilter => 'تصفية البحث';
 
   @override
   String get emergbook => 'طلب خدمة طوارئ';
@@ -124,6 +124,12 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get calendar => 'جدول المواعيد والمهام';
+
+  @override
+  String get workerprf => 'Service Provider Profile';
+
+  @override
+  String get searchresultdetails => 'View Details';
 
   @override
   String get landin1title => 'عملٌ متقن ، خدمةٌ موثوقة بكل سهولة.';
@@ -220,4 +226,307 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get passwordex => 'أرقم و حروف و رموز';
+
+  @override
+  String get homewelcomeC => 'أهلاً بيك يا عمر';
+
+  @override
+  String get homelocation => 'الإسكندرية';
+
+  @override
+  String get homemoney => 'ج.م 00.00';
+
+  @override
+  String get homesearchhintC => 'بتدور على اى؟ (سباك , كهربائى)';
+
+  @override
+  String get homewelcomeW => 'أهلاً بيك يا علي';
+
+  @override
+  String get homesearchhintW => 'دور على شغل مناسب ليك...';
+
+  @override
+  String get homeemserhead => 'خدمة طوارئ ';
+
+  @override
+  String get homeemsertitle => 'صنايعية جاهزين فأي وقت';
+
+  @override
+  String get homeemsersubtitle => 'للحالات الطارئة';
+
+  @override
+  String get homeemserbtn => 'حجز طارئ الآن';
+
+  @override
+  String get homeaihead => '✨ جرّب قبل ما توظف ';
+
+  @override
+  String get homeaititle => 'جرّب حل المشكلة بنفسك';
+
+  @override
+  String get homeaisubtitle => 'جرب حل المشكلة بنفسك قبل ما تطلب فني';
+
+  @override
+  String get homeaibtn => 'جرب بنفسك';
+
+  @override
+  String get homeposts => 'منشورات العمال';
+
+  @override
+  String get homepostsub => 'شوف الصنايعية اللي عارضين شغلهم وخدماتهم.';
+
+  @override
+  String get homeposttitle => 'صيانة وتجديد سباكة شقة بالكامل';
+
+  @override
+  String get homepostbtn => 'تفاصيل المنشور';
+
+  @override
+  String get homepostprf => 'أحمد رمضان';
+
+  @override
+  String get homepostprfloc => '• القاهرة';
+
+  @override
+  String get homepostsviewall => 'عرض كل الأعمال';
+
+  @override
+  String get changelocaddloc => 'الطلب إلى موقع آخر';
+
+  @override
+  String get changeloccity => 'المنزل';
+
+  @override
+  String get changelocaddress => '5480 الاسكندرية';
+
+  @override
+  String get changelocbtn => 'تأكيد الموقع';
+
+  @override
+  String get addmoneysub => 'اكتب القيمة المراد اضافتها الي رصيد محفظتك';
+
+  @override
+  String get addmoneyamount => 'قيمة الشحن';
+
+  @override
+  String get addmoneyamounttextfeild => 'ادخل القيمة';
+
+  @override
+  String get addmoneytype => 'قم باختيار طريقة الشحن';
+
+  @override
+  String get addmoneyaddcard => '+إضافة بطاقة';
+
+  @override
+  String get addmoneybtn => 'شحن الرصيد';
+
+  @override
+  String get searchfilters1 => 'صيانه';
+
+  @override
+  String get searchfilters2 => 'الاسكندرية';
+
+  @override
+  String get searchnoresults => 'لسه مفيش صيانه في الإسكندرية';
+
+  @override
+  String get searchnoresultssudgestion => 'ممكن تلاقي في محافظات تانية';
+
+  @override
+  String get searchnoresultsbtn => 'اعرض كل المحافظات';
+
+  @override
+  String get searchcardtitle => 'كهربائي منازل - تأسيس وصيانة';
+
+  @override
+  String get searchcardprice => '260 ج.م';
+
+  @override
+  String get searchcardprf => 'محمد احمد';
+
+  @override
+  String get searchcardprfdesc => 'كهربائي منازل | العصافرة';
+
+  @override
+  String get searchfilterorder => 'الترتيب';
+
+  @override
+  String get searchfilterorder1 => 'الأعلى تقييماً';
+
+  @override
+  String get searchfilterorder2 => 'الأقرب';
+
+  @override
+  String get searchfilterorder3 => 'السعر الأقل';
+
+  @override
+  String get searchfiltergovernate => 'المحافظة';
+
+  @override
+  String get searchfiltercity => 'المدينة';
+
+  @override
+  String get searchfilterapplybtn => 'تطبيق';
+
+  @override
+  String get searchfilterresetbtn => 'إعادة تعيين';
+
+  @override
+  String get searchresultdetailsestimatedprice => 'سعر المعاينة';
+
+  @override
+  String get searchresultdetailsworkerstatus => 'متاح للعمل';
+
+  @override
+  String get searchresultdetailsdesc => 'الوصف';
+
+  @override
+  String get searchresultdetailsdescrip => 'نقاش محترف تأسيس وتشطيب ودهان الحوائط وعمل جميع انواع الديكورات الحديثة مثل تركيب بنواهات وشيب بورد وبديل خشب وبديل رخام وبديل حجر وعمل جميع الدهانات والديكورات مثل استوك انتيك والقطيفه وجميع ديكورات بسعر مناسب وجوده عاليه وموعيد محدده';
+
+  @override
+  String get searchresultdetailsworkerspec => 'بيعمل إيه بالظبط';
+
+  @override
+  String get searchresultdetailsworkerspec1 => 'دهانات حوائط وأسقف';
+
+  @override
+  String get searchresultdetailsworkerspec2 => 'تركيب ورق حائط';
+
+  @override
+  String get searchresultdetailsworkerspec3 => 'دهانات قطيفة وشامواه';
+
+  @override
+  String get searchresultdetailsworkerspec4 => 'دهانات أبواب خشبية';
+
+  @override
+  String get searchresultdetailsworkerspec5 => 'معالجة رطوبة وتقشير';
+
+  @override
+  String get searchresultdetailsworkerspec6 => 'عزل حوائط';
+
+  @override
+  String get searchresultdetailsworkerspec7 => 'رسم وديكورات مودرن';
+
+  @override
+  String get searchresultdetailsbtn => 'احجز الخدمة الآن';
+
+  @override
+  String get workerprfname => 'أحمد محمد';
+
+  @override
+  String get workerprfloc => 'محرم بك، الإسكندرية';
+
+  @override
+  String get workerprfbookbtn => 'احجز الآن';
+
+  @override
+  String get workerprfchatbtn => 'محادثة الفني';
+
+  @override
+  String get workerprfrate => '4.9';
+
+  @override
+  String get workerprfcompser => '142';
+
+  @override
+  String get workerprfexp => '+5';
+
+  @override
+  String get workerprfratetitle => 'سنوات خبرة';
+
+  @override
+  String get workerprfcompsertitle => 'خدمات منجزة';
+
+  @override
+  String get workerprfexptitle => 'التقييم';
+
+  @override
+  String get workerprfabout => 'نبذة عني';
+
+  @override
+  String get workerprfabout1 => 'دهانات حوائط وأسقف';
+
+  @override
+  String get workerprfabout2 => 'معالجة رطوبة وتقشير';
+
+  @override
+  String get workerprfabout3 => 'رسم وديكورات مودرن';
+
+  @override
+  String get workerprfprevwork => 'شغل سابق';
+
+  @override
+  String get workerrating => 'آراء العملاء';
+
+  @override
+  String get workerratingnone => 'لسه مفيش تقييمات';
+
+  @override
+  String get workerratingnonesub => 'اكتب أول تقييم بعد ما تخلص الخدمة.';
+
+  @override
+  String get bookserviceaddphoto => 'إرفاق صورة للمشكلة (اختياري)';
+
+  @override
+  String get bookserviceaddphotosub => 'اضغط هنا لرفع أو التقاط صورة واضحة';
+
+  @override
+  String get bookserviceaidesc => 'تشخيص المشكلة بالذكاء الاصطناعي';
+
+  @override
+  String get bookserviceaidescsub => 'ساعدنا نفهم المشكلة ونقترح السبب المحتمل';
+
+  @override
+  String get bookserviceaidescbtn => 'تشخيص المشكلة';
+
+  @override
+  String get bookservicelocdesc => 'موقع المشكلة بالتفصيل *';
+
+  @override
+  String get bookservicelocdescex => 'الاسكندرية، شارع المشير';
+
+  @override
+  String get bookserviceprobdesc => 'اكتب وصفًا للمشكلة *';
+
+  @override
+  String get bookserviceprobdescex => 'تسريب شديد في ماسورة الصرف الرئيسية أسفل حوض المطبخ، المياه تغرق الأرضية حالياً ومحبس المياه لا يعمل بالكامل.';
+
+  @override
+  String get bookserviceaiprobdesc => 'اكتب مشكلتك بدقة';
+
+  @override
+  String get bookserviceaiprobdescsub => 'استخدم الذكاء الاصطناعي للإنشاء وصف واضح لمشكلتك';
+
+  @override
+  String get bookserviceaiprobdescsubbtn => 'إنشاء وصف تلقائي';
+
+  @override
+  String get bookserviceimportance => 'درجة الأهمية والسرعة *';
+
+  @override
+  String get bookservicebookbtn => 'اختار موعد';
+
+  @override
+  String get bookserviceembtn => 'احجز طوارئ الآن';
+
+  @override
+  String get eraseall => 'مسح الكل';
+
+  @override
+  String get services => 'الخدمات';
+
+  @override
+  String get plumber => 'سباكة';
+
+  @override
+  String get painter => 'دهانات';
+
+  @override
+  String get carpenter => 'نجارة';
+
+  @override
+  String get ac => 'تكييفات';
+
+  @override
+  String get elecrician => 'كهرباء';
 }
